@@ -1,6 +1,8 @@
 node  'node1', 'node2' {
     include tomcat
+    include prefs
 }
+
 
 node default { 
     notify { "checkpoint_1": 
