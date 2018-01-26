@@ -1,4 +1,10 @@
-node  'node1', 'node2' {
+node  'node1' {
+    include tomcat
+    include prefs
+    include base
+}
+
+node 'node2' {
     include tomcat
     include prefs
 }
