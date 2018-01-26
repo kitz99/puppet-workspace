@@ -1,13 +1,5 @@
-node  'node1' {
-    notify {"**** NODE_1 BLOCK ****": }
-    include java::install
-
-}
-
-node  'node2' {
-    notify {"**** NODE_2 BLOCK ****": }
-    include java::install
-
+node  'node1', 'node2' {
+    include tomcat
 }
 
 node default { 
