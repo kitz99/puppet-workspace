@@ -1,5 +1,10 @@
 node  'node1' {
-    include tomcat
+    class {::tomcat: 
+        xms   => '64m',
+        xmx   => '128m',
+        user  => 'tomcat',
+        group => 'tomcat',
+    }
     include prefs
     include base
 }
