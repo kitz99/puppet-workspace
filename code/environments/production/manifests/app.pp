@@ -7,11 +7,21 @@ node  'node1' {
     }
     include prefs
     include base
+    
+    tomcat::deploy {'sysfoo':
+        deploy_url     => "https://2-119248955-gh.circle-artifacts.com/0/tmp/circle-artifacts.6eWEG7q/sysfoo.war",
+        checksum_value => "d8d1255ff67a5a2954e536625ef010f4"
+    }
 }
 
 node 'node2' {
     include tomcat
-    include prefs
+    # include prefs
+    
+    tomcat::deploy {'sysfoo':
+        deploy_url     => "https://2-119248955-gh.circle-artifacts.com/0/tmp/circle-artifacts.6eWEG7q/sysfoo.war",
+        checksum_value => "d8d1255ff67a5a2954e536625ef010f4"
+    }
 }
 
 

@@ -22,4 +22,7 @@ class tomcat::params {
   $shutdown_wait = "30"
   $shutdown_verbose = "false"
   $catalina_pid = "/var/run/tomcat.pid"
+  
+  $deploy_path = "/var/lib/tomcat/webapps"
+  $checksum = "md5"
 }
